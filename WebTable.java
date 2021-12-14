@@ -22,19 +22,25 @@ public class WebTable {
      int colNum = columns.size();
         System.out.println(rowNum);
         System.out.println(colNum);
-        for(int i=1; i<= columns.size(); i++){
-            for(int j=2;j<=rows.size(); j++){
-                WebElement content = driver.findElement(By.xpath("//table[@class='related-elements']/tbody/tr[8]/td[3]"));
-                String table = content.getText();
-                System.out.println(table);
+       for(int i=2; i<= rows.size(); i++) {
+           for (int j = 1; j <= columns.size(); j++) {
+               WebElement content = driver.findElement(By.xpath("//table[@class='related-elements']/tbody/tr[" + i + "]/td[" + j + "]"));
+               //content.getText();
+               String table = content.getText();
+               // Object students[][] = new Object[rowNum][colNum];
+               //students [i][j] = content.getText();
+               System.out.println(table);
+           }
+       }
             }
-        }
-       // System.out.println(driver.findElement(By.xpath("//table[@class='related-elements']/tbody/tr[8]/td[3]")).getText());
 
 
-    }
+       // System.out.println(driver.findElement(By.xpath("//table[@class='related-elements']/tbody/tr[8]/td[3]")).getText()); */
+
+
 
     public static void main(String[] args) {
         Table();
     }
 }
+
