@@ -51,6 +51,7 @@ public class WebStaticTable {
     @Test
     void checkStructureHas4Values(){
         Assert.assertEquals(structureColumn.size(),4);
+         System.out.println("Third assignment done");
     }
     @Test
     void check6thRowHasTwoColumns() {
